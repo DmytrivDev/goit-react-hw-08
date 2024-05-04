@@ -2,19 +2,19 @@
 	display: flex;
 	gap: 1px;
 	height: 100%;
+	gap: 1.5rem;
 }
 .link {
-	box-shadow: 0 0 30px rgba(0, 0, 0, 0.3) inset;
-	padding: 0 20px;
 	display: flex;
 	align-items: center;
 	gap: 5px;
-	background-color: #36383b;
 	transition: 150ms background-color;
+	text-decoration: none;
+	color: #000;
 	&:hover {
-		background-color: #3b5252;
+		color: blue;
 	}
 }
 .active {
-	background-color: #3b5252;
+	color: blue;
 }

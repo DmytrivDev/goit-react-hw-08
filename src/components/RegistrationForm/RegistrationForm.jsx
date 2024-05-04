@@ -72,7 +72,7 @@ const RegistrationForm = () => {
         {({ errors, touched }) => (
           <Form className={css.form}>
             <div className={css.formbody}>
-              <div>
+              <div className={css.forminner}>
                 <label className={css.label} htmlFor={nameFieldId}>
                   Name
                 </label>
@@ -85,7 +85,7 @@ const RegistrationForm = () => {
                 <ErrorMessage className={css.error} name="name" component="p" />
               </div>
 
-              <div>
+              <div className={css.forminner}>
                 <label className={css.label} htmlFor={emailFieldId}>
                   Email
                 </label>
@@ -103,7 +103,7 @@ const RegistrationForm = () => {
                 />
               </div>
 
-              <div>
+              <div className={css.forminner}>
                 <label className={css.label} htmlFor={passwordFieldId}>
                   Password
                 </label>

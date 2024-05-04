@@ -6,7 +6,7 @@ import { changeFilter } from '../../redux/filters/slice';
 
 import css from './SearchBox.module.scss';
 
-const SearchBox = () => {
+const SearchBox = () => { 
   const searchId = useId();
   const dispatch = useDispatch();
   const filters = useSelector(selectNameFilter);
@@ -14,7 +14,7 @@ const SearchBox = () => {
   const handleSearch = event => dispatch(changeFilter(event));
 
   return (
-    <div className={css.search}>
+    <div className={css.searchBoxContainer}>
       <label className={css.label} htmlFor="searchId">
         Find contacts by name
       </label>

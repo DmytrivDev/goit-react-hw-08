@@ -7,7 +7,7 @@ import css from './AuthNav.module.scss';
 
 const buildLinkClass = ({ isActive }) => {
   return clsx(css.link, isActive && css.active);
-};
+}; 
 
 const AuthNav = () => {
   return (

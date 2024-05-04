@@ -28,7 +28,7 @@ function App() {
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
-
+ 
   return isRefreshing ? (
     <Loader />
   ) : (

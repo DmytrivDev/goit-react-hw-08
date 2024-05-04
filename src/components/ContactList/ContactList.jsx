@@ -4,10 +4,9 @@ import { selectFilteredContacts } from '../../redux/contacts/selectors';
 import { selectNameFilter } from '../../redux/filters/selectors';
 
 import Contact from './Contact/Contact';
-import NotFound from '../NotFound/NotFound';
 
 import css from './ContactList.module.scss';
-
+ 
 const ContactList = () => {
   const contactsFilter = useSelector(selectFilteredContacts);
   const nameFilter = useSelector(selectNameFilter);
@@ -15,9 +14,9 @@ const ContactList = () => {
   return (
     <div className={css.wrapp}>
       {contactsFilter.length === 0 && nameFilter !== '' ? (
-        <NotFound />
+        <div className={css.nothingFound}>Nothing found</div>
       ) : (
-        <ul className={css.list}>
+        <ul className={css.contactsList}>
           {contactsFilter.map(item => (
             <Contact key={item.id} searchContact={item} />
           ))}

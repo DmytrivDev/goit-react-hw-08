@@ -31,10 +31,8 @@ const ContactsPage = () => {
       <DocumentTitle>Contacts</DocumentTitle>
       <div className={css.contacts}>
         <ContactForm />
-        <div className={css.search}>
-          <SearchBox />
-          <ContactList />
-        </div>
+        <SearchBox />
+        <ContactList />
         {isLoading && !error && <Loader />}
         {!isLoading && error && <Error />}
       </div>

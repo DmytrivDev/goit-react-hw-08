@@ -12,7 +12,7 @@ import { FiLogIn } from 'react-icons/fi';
 
 import clsx from 'clsx';
 import css from './LoginForm.module.scss';
-
+ 
 const FeedbackSchema = Yup.object().shape({
   email: Yup.string()
     .email('Invalid email format')

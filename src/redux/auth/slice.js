@@ -8,7 +8,7 @@ const authInitialState = {
   },
   token: null,
   isLoggedIn: false,
-  isRefreshing: false,
+  isRefreshing: false, 
 };
 
 const handleFulfilled = (state, action) => {

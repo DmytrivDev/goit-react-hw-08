@@ -65,37 +65,31 @@ const ContactForm = () => {
       >
         {({ errors, touched }) => (
           <Form className={css.form}>
-            <div className={css.formbody}>
-              <div>
-                <label className={css.label} htmlFor={nameFieldId}>
-                  Name
-                </label>
-                <Field
-                  className={handleInputClass(touched.name, errors.name)}
-                  name="name"
-                  id={nameFieldId}
-                  placeholder="Name..."
-                />
-                <ErrorMessage className={css.error} name="name" component="p" />
-              </div>
+            <div className={css.formItem}>
+              <label className={css.label} htmlFor={nameFieldId}>
+                Name
+              </label>
+              <Field
+                className={handleInputClass(touched.name, errors.name)}
+                name="name"
+                id={nameFieldId}
+                placeholder="Name..."
+              />
+              <ErrorMessage className={css.error} name="name" component="p" />
+            </div>
 
-              <div>
-                <label className={css.label} htmlFor={numberFieldId}>
-                  Number
-                </label>
-                <Field
-                  className={handleInputClass(touched.number, errors.number)}
-                  type="number"
-                  name="number"
-                  id={numberFieldId}
-                  placeholder="Number..."
-                />
-                <ErrorMessage
-                  className={css.error}
-                  name="number"
-                  component="p"
-                />
-              </div>
+            <div className={css.formItem}>
+              <label className={css.label} htmlFor={numberFieldId}>
+                Number
+              </label>
+              <Field
+                className={handleInputClass(touched.number, errors.number)}
+                type="number"
+                name="number"
+                id={numberFieldId}
+                placeholder="Number..."
+              />
+              <ErrorMessage className={css.error} name="number" component="p" />
             </div>
 
             <button className={css.btn} type="submit">

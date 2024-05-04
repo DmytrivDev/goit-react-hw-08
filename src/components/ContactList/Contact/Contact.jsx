@@ -11,12 +11,6 @@ const Contact = ({ searchContact }) => {
   const { id, name, number } = searchContact;
   const dispatch = useDispatch();
 
-  const initials = name
-    .split(' ')
-    .slice(0, 2)
-    .map(word => word[0])
-    .join('');
-
   const notify = promise =>
     toast.promise(promise, {
       loading: 'Removal...',
@@ -30,23 +24,22 @@ const Contact = ({ searchContact }) => {
   };
 
   return (
-    <li className={css.item}>
-      <div className={css.body}>
-        <p className={css.initials}>{initials}</p>
-        <address className={css.address}>
-          <p className={css.name} title={name}>
-            <FaUser className={css.icon} />
-            <span>{name}</span>
-          </p>
-          <a className={css.tel} title={number} href={`tel:${number}`}>
-            <FaPhoneAlt className={css.icon} />
-            <span>{number}</span>
-          </a>
-        </address>
+    <li className={css.contactItem}>
+      <div className={css.contactPart}>
+        <div className={css.contactContact}>
+          <FaUser className={css.icon} />
+          <span>{name}</span>
+        </div>
+        <a href="tel:number" className={css.contactContact}>
+          <FaPhoneAlt className={css.icon} />
+          <span>{number}</span>
+        </a>
       </div>
-      <button className={css.btn} type="button" onClick={handleDelete}>
-        Delete
-      </button>
+      <div className={css.contactPart}>
+        <button type="button" onClick={handleDelete}>
+          Delete
+        </button>
+      </div>
       <Toaster position="top-right" reverseOrder={false} />
     </li>
   );

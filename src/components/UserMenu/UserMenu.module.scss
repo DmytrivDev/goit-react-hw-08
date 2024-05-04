@@ -2,23 +2,18 @@
 	display: flex;
 	align-items: center;
 	height: 100%;
-}
-.name {
-	padding: 0 20px;
-	font-weight: 700;
-	text-decoration: underline;
+	gap: 1.5rem;
 }
 .btn {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 25px;
-	padding: 0 20px;
 	height: 100%;
-	background-color: #36383b;
-	box-shadow: 0 0 30px rgba(0, 0, 0, 0.3) inset;
-	transition: 150ms background-color;
+	gap: 5px;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
 	&:hover {
-		background-color: #833c3c;
+		color: red;
 	}
 }
